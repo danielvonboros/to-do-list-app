@@ -14,10 +14,10 @@ function newItem() {
 
   // CROSS OUT ITEMS
   function crossOut() {
-    li.classList.toggle('strike');
+    li.toggleClass('strike');
   }
 
-  li.addEventListener('dblclick', crossOut);
+  li.on('dblclick', crossOut);
 
   // DELETE BUTTON
   let crossOutButton = document.createElement('crossOutButton');
