@@ -1,16 +1,15 @@
 function newItem() {
 
   // ADD ITEMS
-  let li = document.createElement('li');
-  let inputValue = document.getElementById('input').value;
+  let li = $('<li></li>');
+  let inputValue = $('#input').val();
   let text = document.createTextNode(inputValue);
-  li.appendChild(text);
+  li.append(text);
 
   if (inputValue === '') {
     alert('You must write something!');
   } else {
-    let list = document.querySelector('#list');
-    list.appendChild(li);
+    $('#list').append(li);
   }
 
   // CROSS OUT ITEMS
